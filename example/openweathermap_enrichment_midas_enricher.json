@@ -1,0 +1,24 @@
+{
+	"source": {
+		"csv": {
+			"path": "/Users/Patrick/Dropbox/Science/midas/enrichers/enricher-openweathermap/example/locations.csv"
+		}
+	},
+	"target": {
+		"csv": {
+			"path": "/Users/Patrick/Dropbox/Science/midas/enrichers/enricher-openweathermap/example/locations_enriched.csv"
+		}
+	},
+	"enrichers": [
+		{
+			"name": "OpenWeatherMap",
+			"path": "/Users/Patrick/Dropbox/Science/midas/enrichers/enricher-openweathermap",
+			"config": {
+				"input_parameter": "$..city",
+				"target_property": "current_weather_data",
+				"api_key": "YOUR_API_KEY"
+			}
+		}
+	],
+	"name": "OpenWeatherMap_Enrichment"
+}
